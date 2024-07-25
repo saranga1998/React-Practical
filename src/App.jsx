@@ -3,6 +3,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import './App.css'
 import Modal from 'react-modal';
 import { useState } from 'react';
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
 
 const CustomToast = (closeToast) => {
   return (
@@ -22,12 +24,15 @@ function App() {
   }
   return (
     <div>
-      <button onClick={notify}>Notify!</button>
-      <ToastContainer />
+      <div>
+        <button onClick={notify}>Notify!</button>
+        <ToastContainer />
+      </div>
+
 
       <button onClick={() => setModalIsOpen(true)}>Open Modal</button>
       <div>
-        <Modal isOpen={modalIsOpen} onRequestClose={()=>setModalIsOpen(false)}>
+        <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
           <h2>Modal Head</h2>
           <p>Modal Body</p>
           <div>
@@ -36,6 +41,15 @@ function App() {
         </Modal>
 
       </div>
+
+      <a data-tooltip-id="my-tooltip" data-tooltip-content="Hello to you too!">
+        ◕‿‿◕
+      </a>
+
+      <button> Click</button>
+      <Tooltip id="my-tooltip" />
+
+
     </div>
   )
 }
