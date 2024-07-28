@@ -6,6 +6,7 @@ import Notifi from './Components/Notifi';
 import IdleTimerContainer from './Components/IdleTimerContainer';
 import ColorPiker from './Components/ColorPiker';
 import CreditCard from './Components/CreditCard';
+import DatePicker from './Components/DatePickerA';
 
 
 
@@ -22,6 +23,7 @@ function App() {
       {/* <IdleTimerContainer></IdleTimerContainer> */}
       <ColorPiker/>
       <CreditCard/>
+      <DatePicker/>
     </div>
   )
 }
