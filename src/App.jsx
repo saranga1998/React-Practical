@@ -7,6 +7,7 @@ import IdleTimerContainer from './Components/IdleTimerContainer';
 import ColorPiker from './Components/ColorPiker';
 import CreditCard from './Components/CreditCard';
 import DatePicker from './Components/DatePickerA';
+import Player from './Components/Player';
 
 
 
@@ -24,6 +25,9 @@ function App() {
       <ColorPiker/>
       <CreditCard/>
       <DatePicker/>
+      <div className='.youtubeplayer'>
+        <Player/>
+      </div>
     </div>
   )
 }
